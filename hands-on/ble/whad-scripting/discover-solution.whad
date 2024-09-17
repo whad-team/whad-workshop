@@ -1,0 +1,13 @@
+## Basic WHAD script for wble-central
+
+# Set target BD address
+set TARGET 11:22:33:44:55
+
+# Connect to target device
+connect $TARGET
+
+# Enumerate services and characteristics
+profile
+
+# Read device name
+read 2A00

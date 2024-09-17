@@ -1,0 +1,24 @@
+## WHAD script template for wble-periph to emulate a basic BLE device
+
+# Device configuration: set the DEVICE_NAME variable with the device name string
+set ...
+
+# Configure device name
+name $DEVICE_NAME
+
+# Add a GenericDevice service (UUID 0x1800) with two characteristics:
+#  - a DeviceName characteristic (UUID 0x2A00) with read and write permissions
+#  - a ManufacturerName characteristic (UUID 0x2A29) with read permissions
+#  - set default value for DeviceName: $DEVICE_NAME
+#  - set default value for ManufacturerName: "WHAD workshop"
+#  - end service editing using `back`
+
+# Start advertising
+start
+
+# Wait for the user to press a key
+wait "Press a key to stop the emulated device"
+
+# Stop
+echo "Stopping emulated device ..."
+stop

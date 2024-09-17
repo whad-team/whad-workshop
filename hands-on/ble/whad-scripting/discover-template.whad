@@ -1,0 +1,15 @@
+## Basic WHAD script for wble-central
+
+# Use set to define a TARGET variable
+set TARGET ...
+
+# Connect to TARGET using the `connect` command
+echo "Connecting to target device ..."
+<command here using $TARGET>
+
+# Discover services and characteristics
+echo "Discovering services and characteristics ..."
+<command here>
+
+# Read the device's DeviceName characteristic (0x2A00)
+read ...
